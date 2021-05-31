@@ -1,0 +1,31 @@
+@import '../../assets/styles/variable';
+@import '../../assets/styles/mixins';
+
+.header{
+    &__nav{
+        background-color:$main-color;
+        min-height: 0;
+        padding: 5px;
+    }
+    &__ul{
+        margin-top: auto;
+        display: flex;
+        list-style: none;
+    }
+    &__li{
+        margin-left: 15px;
+        @include atSmallestScreen{
+            margin-left: 10px;
+        }
+    }
+    &__li > a{
+        color: $main-white;
+        @include atSmallestScreen{
+            font-size: 15px;
+        }
+        &:hover{
+            text-decoration: none;
+            color:$golden-color;
+        }
+    }
+}

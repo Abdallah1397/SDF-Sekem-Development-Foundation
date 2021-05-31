@@ -1,0 +1,39 @@
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/variable.scss';
+
+
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__line {
+    width: 20%;
+    height: 2px;
+    background: $line-color;
+
+    @include atMdScreen {
+      width: 40%;
+    }
+
+    @include atLgScreen {
+      width: 70%;
+    }
+  }
+
+  &__heading {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family:'Arial Narrow Bold';
+    font-weight: bolder;
+
+    @include atMdScreen {
+      font-size: 30px;
+      width: 100%;
+
+    }
+  }
+}

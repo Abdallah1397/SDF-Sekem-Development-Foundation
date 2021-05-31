@@ -1,0 +1,136 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variable";
+
+.site-header {
+  // border-bottom: 1px solid $border-color;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: $main-color;
+  z-index: 111;
+  background: $main-white;
+  border-bottom: 1px solid $line-color;
+  padding-bottom: 20px;
+  justify-content: center;
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__navbar-nav {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  &__logo {
+    display: block;
+    // width: 40%;
+    @include atSmallestScreen {
+      width: 20%;
+    }
+    @include atSmScreen {
+      width: 20%;
+    }
+    @include atMdScreen {
+      width: 11%;
+    }
+    @include atLgScreen {
+      width: 90px;
+    }
+  }
+  &__links {
+    display: none;
+    list-style: none;
+    padding: 0;
+    transition: ease 2s all;
+    text-decoration: none;
+    @include atLgScreen {
+      display: flex;
+      align-items: center;
+      margin-left: 10%;
+    }
+    &.active {
+      @include atSmallestScreen {
+        opacity: 1;
+        display: flex;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        flex-direction: column;
+        z-index: 1;
+        min-height: 25vh;
+        width: 100%;
+        padding-top: 5%;
+        background: $main-color;
+        align-items: center;
+      }
+      @include atSmScreen {
+        opacity: 1;
+        display: flex;
+        position: absolute;
+        // left: 0;
+        // right: 0;
+        top: 100%;
+        flex-direction: column;
+        z-index: 1;
+        min-height: 100vh;
+        transition: ease 1s all;
+      }
+      @include atLgScreen {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    display: inline-block;
+    // padding: 16px;
+    font-size: 30px;
+    font-weight: bolder;
+    color: $main-black;
+    width: 120px;
+    text-decoration: none;
+    margin-left: 10px;
+    @include atSmallestScreen {
+      font-size: 13px;
+      padding-top: 10px;
+      color: $main-white;
+
+    }
+    &:hover {
+      text-decoration: none;
+      color: #996a0e;
+    }
+    &.active {
+      color: #996a0e;
+      text-decoration: none;
+    }
+    @include atXLScreen {
+      font-size: 15px;
+    }
+  }
+  &__icons-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  &__links > li {
+    display: inline-block;
+  }
+  &__icons-item {
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+    right: 0;
+    @include atLgScreen {
+      display: none;
+    }
+  }
+  &__toggle {
+    font-size: 20px;
+    @include atLgScreen {
+      display: none;
+    }
+  }
+}
