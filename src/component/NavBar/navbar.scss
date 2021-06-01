@@ -91,6 +91,7 @@
     width: 120px;
     text-decoration: none;
     margin-left: 10px;
+    cursor: pointer;
     @include atSmallestScreen {
       font-size: 13px;
       padding-top: 10px;
@@ -107,6 +108,20 @@
     }
     @include atXLScreen {
       font-size: 15px;
+    }
+  }
+  &__dropdown{
+    border: 0px solid $logo-color;
+  }
+  &__dropdown-item{
+    display: block;
+    color: black;
+    font-size: 19px;
+    padding: 10px;
+
+    &:hover{
+      text-decoration: none;
+      color: #996a0e;
     }
   }
   &__icons-list {

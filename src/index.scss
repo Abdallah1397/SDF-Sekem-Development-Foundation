@@ -76,8 +76,17 @@ body {
   color: $main-white;
   margin-top: 1rem;
   font-size: 0.9rem;
-  box-shadow: 0px 0px 15px 0px rgba(218, 15, 15, 0.75);
-
+  box-shadow: 0px 0px 15px 0px rgba(228, 206, 13, 0.938);
+}
+.btn-subscribe {
+  background:$logo-color;
+  color: $main-white;
+  padding: 10px;
+  font-size: 12px;
+  box-shadow: 0px 0px 2px 0px rgba(228, 206, 13, 0.938);
+  &:hover{
+    background: $primary-color;
+  }
 }
 
 .section-bg {
@@ -86,16 +95,20 @@ body {
 // scroll to top style
 .scrollTop {
   position: fixed;
-  width: 180%;
+  width: 10%;
   bottom: 20px;
   height: 10%;
   z-index: 1000;
   cursor: pointer;
+  margin-left: 85%;
   animation: fadeIn 0.3s;
   transition: opacity 0.4s;
   opacity: 0.5;
   &:hover{
     opacity: 1;
+    background-color: $logo-color;
+    border-radius: 20px;
+    transform: (30px);
 
   }
 }

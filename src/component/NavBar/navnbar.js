@@ -24,11 +24,16 @@ const Navbar = () => {
               <img src={Logo} className="site-header__logo" />
             </div>
             <ul className="site-header__links" id="menu">
-              <li>
-                <NavLink exact to="/" className="site-header__link" id="item" onClick={handleClickNavbarItem}
-                >
-                  Our Sectors
-                </NavLink>
+              <li className="dropdown">
+                <span className="site-header__link dropdown-toggle" onMouseOver id="item" data-toggle="dropdown" onClick={handleClickNavbarItem} aria-haspopup="true" aria-expanded="false">
+                Our Sectors <i class="fa fa-caret-down"></i>
+                </span>
+                <div class="dropdown-menu site-header__dropdown" aria-labelledby="item">
+                <NavLink class="dropdown-item site-header__dropdown-item" to="#" onClick={handleClickNavbarItem}>Eeconomic</NavLink>
+                <NavLink class="dropdown-item site-header__dropdown-item" to="#" onClick={handleClickNavbarItem}>Social</NavLink>
+                <NavLink class="dropdown-item site-header__dropdown-item" to="#" onClick={handleClickNavbarItem}>Cultural</NavLink>
+                <NavLink class="dropdown-item site-header__dropdown-item" to="#" onClick={handleClickNavbarItem}>Ecological</NavLink>
+              </div>
               </li>
               <li>
                 <NavLink to="/work" className="site-header__link" id="item" onClick={handleClickNavbarItem}

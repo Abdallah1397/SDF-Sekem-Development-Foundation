@@ -1,56 +1,86 @@
 import "./footer.scss";
-
+import Logo from "../../assets/images/Logo/logo.png";
+import SocialIcons from "../SocialMedia/socialmedia";
 const Footer = () => {
   return (
-    <div className="container-fluid sections">
-      <section className="row">
-        <table className="container sections__table">
-          <tr className="sections__tr">
-            <td className="sections__td">About Us</td>
-            <td className=" sections__td">Media Center</td>
-            
-            <td style={{color:"white"}} >
-              
-            Subscribe to our newsletter!
-              <div class="input-group sections__input-group" >
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Email"
-                />
-                <button
-                  class="btn"
-                  type="button"
-                  id="button-addon2"
-                  style={{backgroundColor:"#996a0e"}}
-                >
-                  Subscribe
-                </button>
-              </div>
-            </td>
-            </tr>
-          <tr className="sections__tr">
-            <td className="sections__td">Careers</td>
-            <td className=" sections__td">Contact Us</td>
-          </tr>
-          <tr>
-            <td className=" sections__td">Partnership</td>
-            <td className=" sections__td">News & Events</td>
-          </tr>
-          <tr className="sections__tr">
-            <td className=" sections__td">Publications</td>
-            <td className=" sections__td">Donate</td>
-          </tr>
-          <tr></tr>
-        </table>
-        <div>
-          <h5 className="sections__copy-write">
-            Copy Write &copy; {new Date().getFullYear()} Sekem Development
-            Foundation
-          </h5>
+    <section className="site-footer py-5">
+      <div className="container">
+        {/* footer header */}
+        <div className="row site-footer__header">
+          <div className="col-10 col-lg-5 mx-auto">
+            <h5 className="site-footer__title">SUBSCRIBE TO OUR NEWSLETTER</h5>
+            <p className="site-footer__text">
+              Get all the latest information on Events, Sales and Offers.
+            </p>
+          </div>
+          <div className="col-10 col-lg-6 mx-auto">
+            <form
+              onSubmit={(e) => e.preventDefault()}
+              className="site-footer__form"
+            >
+              <input
+                type="email"
+                className="site-footer__input"
+                placeholder="your email..."
+              />
+              <input
+                type="submit"
+                className="btn-subscribe site-footer__btn"
+                value="subscribe"
+              />
+            </form>
+          </div>
         </div>
-      </section>
-    </div>
+        {/* footer content */}
+        <div className="row">
+          <div className="col-10 col-lg-4 mx-auto site-footer__content">
+            <h5 className="site-footer__content-title">CONTACT INFO</h5>
+            <p className="site-footer__content-text">About Us</p>
+            <p className="site-footer__content-text"> Careers </p>
+            <p className="site-footer__content-text">Contact Us</p>
+            <p className="site-footer__content-text">Donate</p>
+
+          </div>
+          <div className="col-10 col-lg-4 mx-auto site-footer__content">
+            <h5 className="site-footer__content-title">INFORMATIONS</h5>
+            <p className="site-footer__content-text">Media Center</p>
+            <p className="site-footer__content-text">Partnership</p>
+            <p className="site-footer__content-text">  News & Events</p>
+            <p className="site-footer__content-text"> Publications </p>
+          </div>
+          <div className="col-10 col-lg-4 mx-auto site-footer__content">
+            <h5 className="site-footer__content-title">Our Sectors</h5>
+            <p className="site-footer__content-text">Eeconomic</p>
+            <p className="site-footer__content-text">Social</p>
+            <p className="site-footer__content-text">Cultural</p>
+            <p className="site-footer__content-text">Ecological</p>
+
+
+          </div>
+        </div>
+        {/* footer footer */}
+        <div className="row site-footer__footer">
+          {/* copy rights */}
+          <div className="col-10 col-lg-12 mx-auto">
+          <SocialIcons />
+
+            <span className="site-footer__rights">
+              <span className="site-footer__rights--author">
+                Sekem Development Foundataion
+              {" "}
+              &copy; {new Date().getFullYear()}. All Rights Reserved
+            </span>
+            </span>
+
+          </div>
+          {/* social icons */}
+
+          <div className="col-10 col-lg-4 mx-auto">
+          </div>
+
+        </div>
+      </div>
+    </section>
   );
 };
 export default Footer;
