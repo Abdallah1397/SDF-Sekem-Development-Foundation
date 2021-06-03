@@ -4,9 +4,15 @@ import "./Banner.scss";
 const Banner = ({ image }) => {
   return (
     <div
-      style={{ backgroundImage: `url(${image})` }}
-      className="about-banner"
+      style={{
+        backgroundImage: `url(${image})`,
+      }}
+      className="div-banner"
     ></div>
   );
 };
+
 export default Banner;
+
+
+

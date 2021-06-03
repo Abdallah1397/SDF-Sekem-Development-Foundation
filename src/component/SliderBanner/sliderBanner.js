@@ -1,37 +1,52 @@
 import "./sliderBanner.scss";
-import {useState} from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import About from "../../assets/images/variousImage/aboutBanner .png";
+import About from "../../assets/images/variousImage/aboutBanner.png";
 
 const SliderBanner = () => {
-    const [index, setIndex] = useState(0);
-
-    const handleSelect = (selectedIndex, e) => {
-      setIndex(selectedIndex);
-    };
   return (
-    <div class="carousel slide" data-ride="carousel" id="carousel-example-generic">
-    <ol class="carousel-indicators">
-        <li data-target="carousel-example-generic" data-slide-to={1} class="active"></li>
-        <li data-target="carousel-example-generic" data-slide-to={0}></li>
-    </ol>
+    <div className="carouselBanner">
+      <div id="myCarousel" className="carousel slide " data-ride="carousel">
+        <ol className="carousel-indicators">
+          <li
+            data-target="#myCarousel"
+            data-slide-to="0"
+            className="active"
+          ></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
 
-    <div class="carousel-inner">
-        <div class="item active">
-            <img src="img1.jpg" style={{width:"360px"}}/>
+        <div className="carousel-inner ">
+          <div className="item active ">
+            <img src={About} alt="Los Angeles" width="100%" className="carouselBanner__maindiv" />
+          </div>
+
+          <div className="item">
+            <img src={About} alt="Chicago" width="100%"  className="" />
+          </div>
+
+          <div className="item">
+            <img src={About} alt="New york" width="100%"  className=""/>
+          </div>
         </div>
-        <div class="item">
-           <img src={About} class="img-responsive" />
-        </div>
+
+        <a
+          className="left carousel-control"
+          href="#myCarousel"
+          data-slide="prev"
+        >
+          <span className="glyphicon glyphicon-chevron-left"></span>
+          <span className="sr-only">Previous</span>
+        </a>
+        <a
+          className="right carousel-control"
+          href="#myCarousel"
+          data-slide="next"
+        >
+          <span className="glyphicon glyphicon-chevron-right"></span>
+          <span className="sr-only">Next</span>
+        </a>
+      </div>
     </div>
-
-    <a class="carousel-control left" href="carousel-example-generic" data-slide="prev">
-        <span class="icon-prev"></span>
-    </a>
-    <a class="carousel-control right" href="carousel-example-generic" data-slide="next">
-        <span class="icon-next"></span>
-    </a>
-</div>
   );
 };
 export default SliderBanner;

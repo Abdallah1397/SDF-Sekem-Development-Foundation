@@ -2,16 +2,16 @@
 @import "../../assets/styles/mixins";
 
 .header {
- 
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 111;
+  background-color: $main-color;
 
   &__nav {
-    background-color: $main-color;
     min-height: 0;
     padding: 5px;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 111;
+  
   }
   &__ul {
     margin-top: auto;

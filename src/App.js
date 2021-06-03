@@ -5,7 +5,6 @@ import Header from "./component/Header/header";
 import Home from "./pages/home";
 import Footer from "./component/Footer/footer";
 import { FaRegArrowAltCircleUp} from "react-icons/fa";
-import SliderBanner from "./component/SliderBanner/sliderBanner";
 
 function App() {
   // state to scrollTop arrow
@@ -27,7 +26,7 @@ function App() {
       <Router>
         <Header />
         <Navbar />
-        <SliderBanner />
+        <Route exact path="/" component={Home}/>        
         <FaRegArrowAltCircleUp
           className="scrollTop"
           onClick={scrollTop}

@@ -51,9 +51,46 @@
   <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
 
   <!-- Carousel -->
-  <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Animated Counter -->
+  <script>
+    var a = 0;
+    $(window).scroll(function () {
+
+      var oTop = $('#counter').offset().top - window.innerHeight;
+      if (a == 0 && $(window).scrollTop() > oTop) {
+        $('.animatedCounter__counter-value').each(function () {
+          var $this = $(this),
+            countTo = $this.attr('data-count');
+          $({
+            countNum: $this.text()
+          }).animate({
+            countNum: countTo
+          },
+
+            {
+
+              duration: 2000,
+              easing: 'swing',
+              step: function () {
+                $this.text(Math.floor(this.countNum));
+              },
+              complete: function () {
+                $this.text(this.countNum);
+                //alert('finished');
+              }
+
+            });
+        });
+        a = 1;
+      }
+
+    });
+  </script>
+
   <title>SDF Sekem Development Foundation</title>
 
   <style>

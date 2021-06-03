@@ -1,5 +1,4 @@
 import "./footer.scss";
-import Logo from "../../assets/images/Logo/logo.png";
 import SocialIcons from "../SocialMedia/socialmedia";
 const Footer = () => {
   return (
