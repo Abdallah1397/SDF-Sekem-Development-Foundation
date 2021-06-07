@@ -79,10 +79,16 @@
   }
 
   &__content-text {
-    font-size: 13px;
+    font-size: 1em;
     margin-bottom: 1rem;
     cursor: pointer;
     font-family: "Arial Narrow Bold";
+    color: whitesmoke;
+    &:hover{
+      text-decoration: none;
+      color: $logo-color;
+    }
+
   }
 
   &__rights {

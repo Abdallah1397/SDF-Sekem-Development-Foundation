@@ -34,7 +34,9 @@ const Footer = () => {
         <div className="row">
           <div className="col-10 col-lg-4 mx-auto site-footer__content">
             <h5 className="site-footer__content-title">CONTACT INFO</h5>
-            <p className="site-footer__content-text">About Us</p>
+            <a className="site-footer__content-text" href="/about">
+            <p >About Us</p>
+            </a>
             <p className="site-footer__content-text"> Careers </p>
             <p className="site-footer__content-text">Contact Us</p>
             <p className="site-footer__content-text">Donate</p>
@@ -49,10 +51,18 @@ const Footer = () => {
           </div>
           <div className="col-10 col-lg-4 mx-auto site-footer__content">
             <h5 className="site-footer__content-title">Our Sectors</h5>
-            <p className="site-footer__content-text">Eeconomic</p>
-            <p className="site-footer__content-text">Social</p>
-            <p className="site-footer__content-text">Cultural</p>
-            <p className="site-footer__content-text">Ecological</p>
+            <a className="site-footer__content-text" href="/economic">
+            <p >Eeconomic</p>
+            </a>
+            <a className="site-footer__content-text"  href="/cultural">
+            <p >Social</p>
+            </a>
+            <a className="site-footer__content-text" href="/social">
+            <p>Cultural</p>
+            </a>
+            <a className="site-footer__content-text" href="/ecological">
+            <p >Ecological</p>
+            </a>
 
 
           </div>

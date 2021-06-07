@@ -1,7 +1,7 @@
 import { ImFacebook, ImTwitter, ImLinkedin2,ImInstagram,ImYoutube} from 'react-icons/im';
-
 import './socialmedia.scss';
 
+//  using react-icons to make the  social media icons in the footer
 const SocialIcons = () => {
   return (
     <div className="socila-icons">

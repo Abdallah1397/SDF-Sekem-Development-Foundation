@@ -100,10 +100,10 @@ body {
   height: 10%;
   z-index: 1000;
   cursor: pointer;
-  margin-left: 89%;
   animation: fadeIn 0.3s;
   transition: opacity 0.4s;
   opacity: 0.5;
+  right: 0;
   &:hover{
     opacity: 1;
     background-color: $logo-color;

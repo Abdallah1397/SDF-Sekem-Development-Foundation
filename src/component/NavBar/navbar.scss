@@ -111,16 +111,25 @@
   }
   &__dropdown{
     border: 0px solid $logo-color;
+ 
   }
   &__dropdown-item{
     display: block;
     color: black;
     font-size: 19px;
     padding: 10px;
-
+ 
     &:hover{
       text-decoration: none;
       color: #996a0e;
+    }
+    &.active {
+      text-decoration: none;
+      color: #996a0e;
+      display: block;
+      font-size: 19px;
+    padding: 10px;
+
     }
   }
   &__icons-list {

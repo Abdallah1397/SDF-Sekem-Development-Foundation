@@ -1,4 +1,3 @@
-import Title from "../Title/Title";
 import "./animatedCounter.scss";
 const AnimatedCounter = ({
 
@@ -12,10 +11,10 @@ const AnimatedCounter = ({
   fact4
 
 }) => {
-    // animated counter component take facts and numer to show it by jQuery
+    // animated counter component take facts and numer to show it by jQuery 
+    // data-count => the number will arrive to it
   return (
     <div id="counter" className="animatedCounter">
-
       <div className="animatedCounter__counter">
         <h3 className="animatedCounter__fact">{fact1}</h3>
         <div className="animatedCounter__counter-value" data-count={counter1}>

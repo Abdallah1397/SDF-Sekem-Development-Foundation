@@ -1,25 +1,24 @@
-// import mixins from styles folder in assets folder
 @import '../../assets/styles/mixins';
 @import '../../assets/styles/variable';
 
-.content-field{
+.aboutContent {
     padding-top: 30px;
-    width: 80%;
-    margin-left: 10%;
     margin-bottom: 3%;
-
-
+    width: 30%;
+    margin-left: 15%;
+    display: inline-block;
     @include atSmallestScreen{
         padding-top: 5px;
-
+        width: 70%;
+        margin-left: 15%;
     }
     &__title{
         font-weight: bold;
         font-family: sans-serif;
-        font-size: 24px;
-
+        font-size: 20px;
     }
     &__paragraph{
         font-size: 20px;
+        text-align: justify;
     }
 }

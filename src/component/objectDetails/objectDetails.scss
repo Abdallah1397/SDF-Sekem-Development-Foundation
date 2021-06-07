@@ -1,0 +1,40 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variable';
+
+.objectDetail{
+    width: 33%;
+    display: inline-block;
+    margin-top: 50px;
+    position: relative;
+    &:hover{
+        #title{
+            display: block;
+        }        
+    }
+
+    @include atSmallestScreen{
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 50px;
+    }
+  
+    &__image{
+        width: 90%;   
+        margin-left: 10%;
+        box-shadow: 10px 10px 10px 10px rgba(230, 230, 232, 1);
+      
+    }
+    &__fakeDiv{
+        background-color: rgb(182, 176, 176);
+        width: 90%;   
+        margin-left: 10%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: none;
+        text-align: center;
+        font-size: 30px;
+        font-family:  Helvetica;
+        font-weight: bolder;
+    }
+}
