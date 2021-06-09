@@ -37,7 +37,9 @@ const Footer = () => {
             <a className="site-footer__content-text" href="/about">
             <p >About Us</p>
             </a>
+            <a className="site-footer__content-text" href="/career">
             <p className="site-footer__content-text"> Careers </p>
+            </a>
             <p className="site-footer__content-text">Contact Us</p>
             <p className="site-footer__content-text">Donate</p>
 

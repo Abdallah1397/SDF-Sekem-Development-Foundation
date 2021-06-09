@@ -17,13 +17,25 @@
     }
   }
   &__fact{
-    font-size: 40px;
+    font-size: 2em;
     font-family:'Arial Narrow Bold';
     font-weight: bolder;
+    @include atSmallestScreen{
+      font-size: 3em;
+    }
+    @include atSmScreen{
+      font-size: 1.5em;
+    }
   }
   &__counter-value {
-    font-size: 70px;
+    font-size: 5em;
     color: $logo-color;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    @include atSmallestScreen{
+      font-size: 4em;
+    }
+    @include atSmScreen{
+      font-size: 3em;
+    }
   }
 }

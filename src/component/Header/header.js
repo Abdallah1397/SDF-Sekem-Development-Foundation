@@ -19,12 +19,12 @@ const Header = () => {
               </a>
             </li>
             <li className="nav-item header__li">
-              <a href="#" className="nav-link  font-weight-bold">
+              <a href="/career" className="nav-link  font-weight-bold">
                 Careers
               </a>
             </li>
             <li className="nav-item header__li">
-              <a href="#" className="nav-link  font-weight-bold">
+              <a href="/contact" className="nav-link  font-weight-bold">
                 Contact Us
               </a>
             </li>

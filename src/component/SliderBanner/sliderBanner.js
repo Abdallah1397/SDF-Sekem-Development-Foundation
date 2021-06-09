@@ -1,5 +1,7 @@
 import "./sliderBanner.scss";
-import About from "../../assets/images/variousImage/aboutBanner.png";
+import mrHelmy from "../../assets/images/variousImage/mrHelmy.png";
+import cover1 from "../../assets/images/cultural/school2.jpg";
+import cover2 from "../../assets/images/cultural/DSC_3587.jpg";
 
 const SliderBanner = () => {
   return (
@@ -17,15 +19,24 @@ const SliderBanner = () => {
 
         <div className="carousel-inner ">
           <div className="item active ">
-            <img src={About} alt="Los Angeles" width="100%" className="carouselBanner__maindiv" />
+            <div
+              className="carouselBanner__image-div"
+              style={{ backgroundImage: `url(${mrHelmy})` }}
+            ></div>
           </div>
 
           <div className="item">
-            <img src={About} alt="Chicago" width="100%"  className="" />
+            <div
+              className="carouselBanner__image-div"
+              style={{ backgroundImage: `url(${cover1})` }}
+            ></div>{" "}
           </div>
 
           <div className="item">
-            <img src={About} alt="New york" width="100%"  className=""/>
+            <div
+              className="carouselBanner__image-div"
+              style={{ backgroundImage: `url(${cover2})` }}
+            ></div>{" "}
           </div>
         </div>
 

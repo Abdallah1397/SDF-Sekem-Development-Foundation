@@ -98,7 +98,7 @@ body {
   width: 3%;
   bottom: 20px;
   height: 10%;
-  z-index: 1000;
+  z-index: 1;
   cursor: pointer;
   animation: fadeIn 0.3s;
   transition: opacity 0.4s;
@@ -119,4 +119,12 @@ body {
 // paginate
 .pagination{
   justify-content: center;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+  height: 60vh;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
 }
