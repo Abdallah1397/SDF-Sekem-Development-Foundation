@@ -3,7 +3,7 @@ import Title from '../Title/Title';
 import clientImg1 from '../../assets/images/variousImage/1.png';
 import './partnerSlider.scss';
 
-const PartnershipSlider = () => {
+const PartnershipSlider = ({title}) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -45,7 +45,7 @@ const PartnershipSlider = () => {
   return (
     <section className="py-5 section-bg">
       <div className="container">
-        <Title title="OUR Partnership" />
+        <Title title={title} />
         <Slider {...settings}>
           <div className="client-image-container">
             <img className="client-image" src={clientImg1} alt="client logo" />

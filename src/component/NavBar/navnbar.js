@@ -70,15 +70,15 @@ const Navbar = () => {
                 </div>
               </li>
               <li>
-                <NavLink
-                  exact
-                  to="/partnership"
+                <a
+                  
+                  href="/partnership"
                   className="site-header__link"
                   id="item"
                   onClick={handleClickNavbarItem}
                 >
                   Partnership
-                </NavLink>
+                </a>
               </li>
               <li>
                 <NavLink

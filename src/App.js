@@ -20,6 +20,7 @@ import Cultural from "./pages/cultural";
 import MediaCenter from "./pages/mediaCenter";
 import Careers from "./pages/carees";
 import ContactUs from "./pages/contactUs";
+import Partnerships from "./pages/partnerships";
 
 function App() {
   /********************************* Up Top ********************************/
@@ -61,6 +62,8 @@ function App() {
           <Route exact path="/media" component={MediaCenter} />
           <Route exact path="/career" component={Careers} />
           <Route exact path="/contact" component={ContactUs} />
+          <Route exact path="/partnership" component={Partnerships} />
+
 
           {/*  up to top button */}
           <FaRegArrowAltCircleUp

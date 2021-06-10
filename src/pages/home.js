@@ -20,7 +20,7 @@ const Home = () => {
         fact4="Governorates"
         counter4={1321}
       />
-      <ClientSlider />
+      <ClientSlider title="Partners"/>
     </div>
   );
 };
