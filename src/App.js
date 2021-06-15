@@ -21,23 +21,25 @@ import MediaCenter from "./pages/mediaCenter";
 import Careers from "./pages/carees";
 import ContactUs from "./pages/contactUs";
 import Partnerships from "./pages/partnerships";
+import NewsPage from "./pages/news";
+import NewsDetails from "./pages/newsDetails";
 
 function App() {
   /********************************* Up Top ********************************/
-  // state to scrollTop arrow
-  const [showScroll, setShowScroll] = useState(false);
-  const checkScrollTop = () => {
-    // to check scroll or not
-    if (!showScroll && window.pageYOffset > 50) {
-      setShowScroll(true);
-    } else if (showScroll && window.pageYOffset <= 50) {
-      setShowScroll(false);
-    }
-  };
-  const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-  window.addEventListener("scroll", checkScrollTop);
+  // // state to scrollTop arrow
+  // const [showScroll, setShowScroll] = useState(false);
+  // const checkScrollTop = () => {
+  //   // to check scroll or not
+  //   if (!showScroll && window.pageYOffset > 50) {
+  //     setShowScroll(true);
+  //   } else if (showScroll && window.pageYOffset <= 50) {
+  //     setShowScroll(false);
+  //   }
+  // };
+  // const scrollTop = () => {
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  // };
+  // window.addEventListener("scroll", checkScrollTop);
   /**********************************************************************/
   /**********************************************************************/
 
@@ -63,14 +65,13 @@ function App() {
           <Route exact path="/career" component={Careers} />
           <Route exact path="/contact" component={ContactUs} />
           <Route exact path="/partnership" component={Partnerships} />
+          <Route exact path="/news" component={NewsPage} />
+          <Route exact path="/news/:id " component={NewsDetails}/>
+
 
 
           {/*  up to top button */}
-          <FaRegArrowAltCircleUp
-            className="scrollTop"
-            onClick={scrollTop}
-            style={{ height: 40, display: showScroll ? "flex" : "none" }}
-          />
+        
           <Footer />
         </Router>
       </div>

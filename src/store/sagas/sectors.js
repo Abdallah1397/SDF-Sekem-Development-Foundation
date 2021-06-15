@@ -4,11 +4,9 @@ import * as actions from "../actions/sectors";
 import Types from "../types/sector";
 
 function* sectors() {
-  console.log("asas");
   yield put(actions.setLoading(true));
   try {
     const result = yield call(api.getSectors);
-    console.log(result.data,"sectors in saga file");
     yield put (actions.getSectorsSuccess(result.data));
   } catch (error) {
     yield put(actions.getSectorsFail());

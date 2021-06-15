@@ -1,0 +1,34 @@
+************************************************************
+************************Redux Saga**************************
+************************************************************
+
+1) why Redux Saga ?
+        - in redux we facing a problems in fetching data (asynchronous like    data fetching) 
+        so Saga make :
+        - The simplicity of testing.
+        - Simplicity in organizing difficult side effects sequences;
+
+
+2) How it work ? 
+
+    - create Store : 
+        1- create Api 
+            that contain the urls of data.
+
+        2- create Types
+            that contain the types of actions 
+        
+        3- actions
+            function return actions
+
+        4- sagas file
+            works as middle ware
+        
+        5- reducers
+            global state 
+
+    
+    1) view=> _event_ => 2) actions=> _dispatch-actions_ => 
+    3) middleware (sagas) => _request_ => 4) api => _response_ =>
+    5) middleware (sagas) => (prev State ,action) => 6) reducers =>
+    _newState_ => 7) view

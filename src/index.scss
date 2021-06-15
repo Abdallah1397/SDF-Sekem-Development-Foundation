@@ -1,5 +1,5 @@
-@import './assets/styles/mixins';
-@import './assets/styles/variable';
+@import "./assets/styles/mixins";
+@import "./assets/styles/variable";
 
 * {
   margin: 0;
@@ -12,10 +12,8 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-
-
 
 .btn {
   padding: 0.5rem 0.8rem;
@@ -69,7 +67,6 @@ body {
   margin-top: 1rem;
   font-size: 0.9rem;
   box-shadow: 0px 0px 15px 0px rgba(50, 64, 190, 0.75);
-
 }
 .btn-danger {
   background: darkred;
@@ -79,12 +76,12 @@ body {
   box-shadow: 0px 0px 15px 0px rgba(228, 206, 13, 0.938);
 }
 .btn-subscribe {
-  background:$logo-color;
+  background: $logo-color;
   color: $main-white;
   padding: 10px;
   font-size: 12px;
   box-shadow: 0px 0px 2px 0px rgba(228, 206, 13, 0.938);
-  &:hover{
+  &:hover {
     background: $primary-color;
   }
 }
@@ -104,27 +101,58 @@ body {
   transition: opacity 0.4s;
   opacity: 0.5;
   right: 0;
-  &:hover{
+  &:hover {
     opacity: 1;
     background-color: $logo-color;
     border-radius: 20px;
     transform: (30px);
-
   }
-  @include atSmallestScreen{
+  @include atSmallestScreen {
     width: 10%;
   }
 }
 
 // paginate
-.pagination{
-  justify-content: center;
+.paginate {
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+
 }
 
 /* Set the size of the div element that contains the map */
-#map {
-  height: 60vh;
-  /* The height is 400 pixels */
+// map style 
+.map-div {
+  position: relative;
+  justify-content: center;
   width: 100%;
-  /* The width is the width of the web page */
+
+  #map {
+    height: 60vh;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
+  &__card{
+    padding: 3%;
+
+  }
+  &__contactUs {
+    background-color: white;
+    position: absolute;
+    top:0;
+    margin-left: 9%;
+    @include atSmallestScreen{
+      margin-left: 0%;
+      font-size: 1.2em;
+
+    }
+  }
+  &__card-header{
+    width: 100%;
+    font-size: 2em;
+    padding: 2%;
+    color: white;
+    background-color: $logo-color;
+  }
 }

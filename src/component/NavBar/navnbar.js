@@ -31,38 +31,37 @@ const Navbar = () => {
               <li className="dropdown">
                 <span
                   className="site-header__link dropdown-toggle"
-                  onMouseOver
                   id="item"
                   data-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Our Sectors <i class="fa fa-caret-down"></i>
+                  Our Sectors <i className="fa fa-caret-down"></i>
                 </span>
                 <div
-                  class="dropdown-menu site-header__dropdown"
+                  className="dropdown-menu site-header__dropdown"
                   aria-labelledby="item"
                 >
                   <a
-                    class="dropdown-item site-header__dropdown-item"
+                    className="dropdown-item site-header__dropdown-item"
                     href="/economic"
                   >
                     Eeconomic
                   </a>
                   <a
-                    class="dropdown-item site-header__dropdown-item"
+                    className="dropdown-item site-header__dropdown-item"
                     href="/social"
                   >
                     Social
                   </a>
                   <a
-                    class="dropdown-item site-header__dropdown-item"
+                    className="dropdown-item site-header__dropdown-item"
                     href="/cultural"
                   >
                     Cultural
                   </a>
                   <a
-                    class="dropdown-item site-header__dropdown-item"
+                    className="dropdown-item site-header__dropdown-item"
                     href="/ecological"
                   >
                     Ecological
@@ -81,15 +80,14 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <NavLink
-                  exact
-                  to="/news"
+                <a
+                  href="/news"
                   className="site-header__link"
                   id="item"
                   onClick={handleClickNavbarItem}
                 >
                   News & Events
-                </NavLink>
+                </a>
               </li>
               <li>
                 <NavLink

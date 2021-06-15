@@ -9,7 +9,7 @@ const Header = () => {
         <div id="navbarSupportedContent" className="container">
           <ul className="navbar-nav  header__ul">
             <li className="nav-item active header__li">
-              <NavLink eact to="/about" className="nav-link  font-weight-bold">
+              <NavLink exact to="/about" className="nav-link  font-weight-bold">
                 About Us <span className="sr-only">(current)</span>
               </NavLink>
             </li>
