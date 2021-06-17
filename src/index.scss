@@ -156,3 +156,44 @@ body {
     background-color: $logo-color;
   }
 }
+
+// News Detail ****************************************
+
+.newsDetail{
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 3%;
+  margin-bottom: 30px;
+  @include atSmallestScreen{
+  display: block;
+  margin-left: 4%;
+  }  
+  @include atLgScreen{
+    display: flex;
+
+  }
+
+
+  &__image-date{
+    width: 40%;
+    @include atSmallestScreen{
+      width: 95%;
+    }
+  }
+  &__image{
+    width: 400px;
+     @include atSmallestScreen{
+      width: 100%;
+    }
+  }
+  &__detail{
+    width: 50%;
+    font-size: 1.4em;
+    display: block;
+    @include atSmallestScreen{
+      width: 100%;
+      font-size: 1em;
+
+    }
+  }
+}

@@ -10,9 +10,7 @@ function* sectors() {
     yield put (actions.getSectorsSuccess(result.data));
   } catch (error) {
     yield put(actions.getSectorsFail());
-  } finally {
-    yield put(actions.setLoading(false));
-  }
+  } 
 }
 
 export default function* sectorsSaga() {

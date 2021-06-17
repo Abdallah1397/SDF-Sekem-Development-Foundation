@@ -13,8 +13,6 @@ function* news(){
         yield put(actions.getNewsSuccess(result));
     }catch(error){
         yield put(actions.getNewsFail());
-    }finally{
-        yield put(actions.setLoading(false));
     }
 }
 

@@ -66,7 +66,7 @@ function App() {
           <Route exact path="/contact" component={ContactUs} />
           <Route exact path="/partnership" component={Partnerships} />
           <Route exact path="/news" component={NewsPage} />
-          <Route exact path="/news/:id " component={NewsDetails}/>
+          <Route exact path="/news/:id" component={NewsDetails}/>
 
 
 
