@@ -1,18 +1,28 @@
-import initMap from "../utils/map";
-import { useEffect } from "react";
-const ContactUs = () => {
-  useEffect(() => {
-    if(initMap){
-      initMap();
-      console.log(initMap,"initmap")
-    }else{
-      initMap();
+import { useGoogleMaps } from "react-hook-google-maps";
 
-    }
-  }, []);
+const ContactUs = () => {
+
+//  location of sdf
+  const uluru={ lat:30.153462240231498, lng: 31.432312465685104};
+  const {ref,map,google}=useGoogleMaps(
+    // Api from google developer
+    "AIzaSyCjfnlM47jwc23BG7ZldF4qcSVLRitN_SE",
+    {
+      center:{ lat:30.153462240231498, lng: 31.432312465685104},
+      zoom:16,
+    },
+  );
+  // to put marker of sdf
+  if (map){
+    new google.maps.Marker({ position: uluru, map,title:"Sekeme Development Foundation SDF" });
+    const panel = document.getElementById('contact_details');
+    // put it in center
+    map.controls[google.maps.ControlPosition.LEFT_CENTER].push(panel);
+
+  }
   return (
     <div className="map-div">
-      <div id="map"></div>
+      <div ref={ref} style={{width: "100%", height: "70vh" }}></div>
       <div className="map-div__contactUs" id="contact_details">
         <div className="map-div__card">
           <div className="map-div__card-header">Contact Us</div>
@@ -51,6 +61,7 @@ const ContactUs = () => {
           </div>
         </div>{" "}
       </div>
+      
     </div>
   );
 };

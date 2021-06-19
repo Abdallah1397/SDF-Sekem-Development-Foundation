@@ -71,9 +71,8 @@ body {
 .btn-danger {
   background: darkred;
   color: $main-white;
-  margin-top: 1rem;
   font-size: 0.9rem;
-  box-shadow: 0px 0px 15px 0px rgba(228, 206, 13, 0.938);
+  left: 0;
 }
 .btn-subscribe {
   background: $logo-color;
@@ -85,11 +84,13 @@ body {
     background: $primary-color;
   }
 }
-
 .section-bg {
   background: $section-bg;
 }
+// **********************************************************************
 // scroll to top style
+// **********************************************************************
+
 .scrollTop {
   position: fixed;
   width: 3%;
@@ -111,44 +112,41 @@ body {
     width: 10%;
   }
 }
-
+// **********************************************************************
 // paginate
+// **********************************************************************
 .paginate {
   width: 80%;
   margin-left: 10%;
   text-align: center;
-
 }
-
+// **********************************************************************
 /* Set the size of the div element that contains the map */
-// map style 
+// map style
+// **********************************************************************
+
 .map-div {
   position: relative;
   justify-content: center;
   width: 100%;
 
-  #map {
-    height: 60vh;
-    /* The height is 400 pixels */
-    width: 100%;
-    /* The width is the width of the web page */
-  }
-  &__card{
+  &__card {
     padding: 3%;
-
+    @include atSmallestScreen {
+      padding: 1%;
+    }
   }
   &__contactUs {
     background-color: white;
     position: absolute;
-    top:0;
+    top: 0;
     margin-left: 9%;
-    @include atSmallestScreen{
+    justify-self: center;
+    @include atSmallestScreen {
       margin-left: 0%;
-      font-size: 1.2em;
-
     }
   }
-  &__card-header{
+  &__card-header {
     width: 100%;
     font-size: 2em;
     padding: 2%;
@@ -156,44 +154,42 @@ body {
     background-color: $logo-color;
   }
 }
-
+// **********************************************************************
 // News Detail ****************************************
+// **********************************************************************
 
-.newsDetail{
+.newsDetail {
   width: 80%;
   margin-left: 10%;
   margin-top: 3%;
   margin-bottom: 30px;
-  @include atSmallestScreen{
-  display: block;
-  margin-left: 4%;
-  }  
-  @include atLgScreen{
+  @include atSmallestScreen {
+    display: block;
+    margin-left: 4%;
+  }
+  @include atLgScreen {
     display: flex;
-
   }
 
-
-  &__image-date{
+  &__image-date {
     width: 40%;
-    @include atSmallestScreen{
+    @include atSmallestScreen {
       width: 95%;
     }
   }
-  &__image{
+  &__image {
     width: 400px;
-     @include atSmallestScreen{
+    @include atSmallestScreen {
       width: 100%;
     }
   }
-  &__detail{
+  &__detail {
     width: 50%;
     font-size: 1.4em;
     display: block;
-    @include atSmallestScreen{
+    @include atSmallestScreen {
       width: 100%;
       font-size: 1em;
-
     }
   }
 }
