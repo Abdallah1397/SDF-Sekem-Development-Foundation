@@ -24,6 +24,7 @@ export default function getNewsDetail(state=INITIAl_STATE,actions){
         };
         default:{
             return{
+                ...state,
             }
         };
     }

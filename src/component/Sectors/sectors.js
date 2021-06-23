@@ -11,7 +11,6 @@ const Sector = ({ sectors, getSectors }) => {
   useEffect(() => {
     getSectors();
   }, []);
-  console.log(sectors, "sectorsFile");
   return (
     <div className="sector ">
       {/* Title of Page*/}
@@ -21,12 +20,14 @@ const Sector = ({ sectors, getSectors }) => {
         sectors.map((item) => {
           return (
             /* link to the reference of sectors*/
-            <a href={item.href}>
+            <a href={`/sector/${item._id}`}>
               <div
+              id={item._id}
                 className="sector__image-div"
                 style={{
                   backgroundImage: `url(http://10.0.30.166:8080/${item.img})`,
                 }}
+                
               >
                 <div className="sector__image-headingDiv">
                   <h3 className="sector__image-heading" id="header">
@@ -34,7 +35,7 @@ const Sector = ({ sectors, getSectors }) => {
                   </h3>
                 </div>
               </div>
-            </a>
+              </a>
           );
         })
       ) : (

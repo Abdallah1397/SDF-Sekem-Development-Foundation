@@ -1,5 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
+import { connect } from "react-redux";
+import {getSectorsRequest} from '../../store/actions/sectors'
 import "./navbar.scss";
 import Logo from "../../assets/images/Logo/logo.png";
 import { FaBars } from "react-icons/fa";
@@ -14,9 +17,13 @@ const handleClickNavbarItem = () => {
   document.querySelector("#menu").classList.remove("active");
 };
 // Navbar Component
-const Navbar = () => {
+const Navbar = ({sector,getSector}) => {
+  // i'm using state mangment to get the sector data in dropdown
+  useEffect(()=>{
+    getSector();
+  },[]);
+
   return (
-    
     <header className="site-header ">
     <Header />
       <div className="container">
@@ -42,30 +49,18 @@ const Navbar = () => {
                   className="dropdown-menu site-header__dropdown"
                   aria-labelledby="item"
                 >
-                  <a
-                    className="dropdown-item site-header__dropdown-item"
-                    href="/economic"
-                  >
-                    Eeconomic
-                  </a>
-                  <a
-                    className="dropdown-item site-header__dropdown-item"
-                    href="/social"
-                  >
-                    Social
-                  </a>
-                  <a
-                    className="dropdown-item site-header__dropdown-item"
-                    href="/cultural"
-                  >
-                    Cultural
-                  </a>
-                  <a
-                    className="dropdown-item site-header__dropdown-item"
-                    href="/ecological"
-                  >
-                    Ecological
-                  </a>
+                 {
+                  // get the title of sector from data base 
+                  sector?(
+                   sector.map((item)=>{
+                     return(
+                      <a href={`/sector/${item._id}`} className="site-header__dropdown-item">
+                      <h4>{item.title}</h4>
+                      </a>
+                     )
+                  
+                   })
+                 ):"Some Thing wrong in server please wait .. "}
                 </div>
               </li>
               <li>
@@ -128,4 +123,10 @@ const Navbar = () => {
     </header>
   );
 };
-export default Navbar;
+const mapStateToProps=(state)=>({
+  sector:state.sector.sectors.data,
+})
+const mapDispatchToProps={
+  getSector:getSectorsRequest,
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Navbar);

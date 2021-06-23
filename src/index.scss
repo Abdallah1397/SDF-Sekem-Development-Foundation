@@ -158,7 +158,7 @@ body {
 // News Detail ****************************************
 // **********************************************************************
 
-.newsDetail {
+.detailForPrograms {
   width: 80%;
   margin-left: 10%;
   margin-top: 3%;
@@ -166,9 +166,21 @@ body {
   @include atSmallestScreen {
     display: block;
     margin-left: 4%;
+    width: 90%;
+
+  }
+  @include atSmScreen{
+    display: block;
+    margin-left: 4%;
+    width: 90%;
+  }
+  @include atMdScreen{
+    display: block;
+    margin-left: 4%;
+    width: 90%;
   }
   @include atLgScreen {
-    display: flex;
+    display: inline-block; 
   }
 
   &__image-date {
@@ -178,18 +190,36 @@ body {
     }
   }
   &__image {
-    width: 400px;
+    width: 100%;
+    display: block;
     @include atSmallestScreen {
       width: 100%;
     }
   }
   &__detail {
-    width: 50%;
+    width: 100%;
     font-size: 1.4em;
     display: block;
     @include atSmallestScreen {
       width: 100%;
       font-size: 1em;
     }
+    @include atSmScreen {
+      width: 100%;
+      font-size: 1em;
+    }
+    @include atMdScreen {
+      width: 100%;
+      font-size: 1em;
+    }
   }
+}
+
+// **********************************************************************
+// Sector Detail ****************************************
+// **********************************************************************
+.DivDetail{
+  width: 70%;
+  margin-left: 15%;
+  margin-bottom: 5%;
 }

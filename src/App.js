@@ -23,7 +23,9 @@ import ContactUs from "./pages/contactUs";
 import Partnerships from "./pages/partnerships";
 import NewsPage from "./pages/news";
 import NewsDetails from "./pages/newsDetails";
-
+import MainSector from "./pages/mainSectors";
+import Projects from './pages/projects';
+import projectDetails from "./pages/projectDetails";
 function App() {
   /********************************* Up Top ********************************/
   // // state to scrollTop arrow
@@ -67,8 +69,9 @@ function App() {
           <Route exact path="/partnership" component={Partnerships} />
           <Route exact path="/news" component={NewsPage} />
           <Route exact path="/news/:id" component={NewsDetails}/>
-
-
+          <Route exact path="/sector/:id" component={MainSector}/>
+          <Route exact path="/projects-programs/:id" component={Projects}/>
+          <Route exact path="/project/:id" component={projectDetails}/>
 
           {/*  up to top button */}
         

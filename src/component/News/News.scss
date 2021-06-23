@@ -1,31 +1,47 @@
-@import '../../assets/styles/mixins';
-@import '../../assets/styles/variable';
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variable";
 
-.news{
-    width: 40%;
-    margin: 2%;
-    display: inline-block;
-    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    @include atSmallestScreen{
-        width: 85%;
-
-    }
-    &__image{
-        width: 100%;
-    }
-    &__date{
-        font-weight: bold;
-        padding-left: 1rem;
-    }
-    &__title{
-        font-family: Arial, Helvetica, sans-serif;
+.news {
+  width: 40%;
+  margin: 2%;
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  @include atSmallestScreen {
+    width: 85%;
+  }
+  &__image {
+    width: 100%;
+  }
+  &__date {
+    font-weight: bold;
+    padding-left: 1rem;
+  }
+  &__title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: $logo-color;
+    padding-left: 1rem;
+  }
+  &__subTitle {
+    padding-left: 1rem;
+    margin-bottom: 30px;
+    white-space: nowrap; 
+    width:80%;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+  &__link {
+    width: 100%;
+  
+  }
+  &__icon{
+    float: right;
+    color: $main-color;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    &:hover{
         color: $logo-color;
-        padding-left: 1rem;
+
 
     }
-    &__subTitle{
-        padding-left: 1rem;
-        margin-bottom: 30px;
-
-    }
+}
 }

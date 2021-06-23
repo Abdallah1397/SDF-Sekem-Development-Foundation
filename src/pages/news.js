@@ -30,7 +30,7 @@ const NewsPage = ({ news, getNews }) => {
             return (
               <News
                 id={item._id}
-                image={item.img}
+                image={`http://10.0.30.166:8080/${item.img}`}
                 date={item.date}
                 title={item.title}
                 subTitle={item.details}
