@@ -2,7 +2,7 @@ import './objectDetails.scss';
 const ObjectDetails=({image,title,id,href})=>{
    // ObjectDetails to any display as image and title 
     return(
-        <div className="objectDetail" data-aos="zoom-in-right" data-aos-duration="2000">
+        <div className="objectDetail" >
         <a href={`/${href}/${id}`}  >
         <div >
 
