@@ -8,7 +8,7 @@ const Content = ({ topic, title,subTitle }) => {
     <div className="content-field "  >
     <Title title={title} />
     <h6 className="content-field__title">{subTitle}</h6>
-    <p className="container content-field__paragraph mt-5" data-aos="flip-left"  data-aos-duration="2000">{topic}</p>
+    <p className="container content-field__paragraph mt-5" data-aos="zoom-in-right" data-aos-duration="2000">{topic}</p>
     </div>
   );
 };

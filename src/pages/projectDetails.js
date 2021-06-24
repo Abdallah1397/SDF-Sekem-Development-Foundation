@@ -17,7 +17,7 @@ const ProjectDetails=({projectDetails,getprojectDetails})=>{
         <div>
         <SliderBanner />
         <Title title={ projectDetails.title } />
-        <div className="detailForPrograms">
+        <div className="detailForPrograms" data-aos="zoom-in-right" data-aos-duration="2000">
         <div className="detailForPrograms__image-date">
           <img className="detailForPrograms__image"
             src={

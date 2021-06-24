@@ -20,7 +20,7 @@ const Sector = ({ sectors, getSectors }) => {
         sectors.map((item) => {
           return (
             /* link to the reference of sectors*/
-            <a href={`/sector/${item._id}`}>
+            <a href={`/sector/${item._id}` } data-aos="zoom-in-right" data-aos-duration="2000">
               <div
               id={item._id}
                 className="sector__image-div"

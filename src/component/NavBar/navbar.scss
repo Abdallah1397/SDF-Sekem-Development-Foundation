@@ -76,6 +76,21 @@
         min-height: 100vh;
         transition: ease 1s all;
       }
+      @include atMdScreen{
+        opacity: 1;
+        display: flex;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        flex-direction: column;
+        z-index: 1;
+        min-height: 25vh;
+        width: 100%;
+        padding-top: 5%;
+        background: $main-color;
+        align-items: center;
+      }
       @include atLgScreen {
         display: none;
       }
@@ -95,8 +110,13 @@
       font-size: 13px;
       padding-top: 10px;
       color: $main-white;
-
     }
+    @include atMdScreen{
+      font-size: 16px;
+      padding-top: 10px;
+      color: $main-white;
+    }
+
     &:hover {
       text-decoration: none;
       color: #996a0e;
