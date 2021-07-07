@@ -26,6 +26,7 @@ import NewsDetails from "./pages/newsDetails";
 import MainSector from "./pages/mainSectors";
 import Projects from './pages/projects';
 import projectDetails from "./pages/projectDetails";
+import MediaCenterPhotos from './pages/mediaCenterPhotos';
 function App() {
   /********************************* Up Top ********************************/
   // // state to scrollTop arrow
@@ -72,6 +73,8 @@ function App() {
           <Route exact path="/sector/:id" component={MainSector}/>
           <Route exact path="/projects-programs/:id" component={Projects}/>
           <Route exact path="/project/:id" component={projectDetails}/>
+          <Route exact path="/photos" component={MediaCenterPhotos}/>
+
 
           {/*  up to top button */}
         

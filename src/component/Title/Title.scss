@@ -10,16 +10,16 @@
   
 
   &__line {
-    width: 20%;
+    width: 10%;
     height: 2px;
-    background: $line-color;
+    background: $logo-color;
 
     @include atMdScreen {
-      width: 40%;
+      width: 5%;
     }
 
     @include atLgScreen {
-      width: 70%;
+      width: 40%;
     }
   }
 
@@ -27,13 +27,13 @@
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    font-size: 30px;
-    font-family:'Arial Narrow Bold';
+    font-size: 1.8em;
+    font-family:sans-serif;
     font-weight: bolder;
+    color: #666666;
 
 
     @include atMdScreen {
-      font-size: 30px;
       width: 100%;
 
     }

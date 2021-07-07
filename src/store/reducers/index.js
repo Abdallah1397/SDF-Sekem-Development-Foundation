@@ -5,6 +5,7 @@ import NewsDetailsReducer from './newsDetail';
 import sectorDetailsReducer from './sectorDetails';
 import projectsReducer from './projects';
 import projectDetailsReducer from "./projectDetails";
+import mediaCenterReducer from './mediacenter';
 
 
 const rootReducer=combineReducers({
@@ -14,5 +15,6 @@ const rootReducer=combineReducers({
     sectorDetails:sectorDetailsReducer,
     projects:projectsReducer,
     projectDetails:projectDetailsReducer,
+    mediaCenter:mediaCenterReducer,
 });
 export default rootReducer;

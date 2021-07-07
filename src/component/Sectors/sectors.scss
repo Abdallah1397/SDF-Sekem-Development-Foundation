@@ -4,8 +4,6 @@
 .sector {
   width: 80%;
   margin-left: 10%;
-
-
   &__image-div {
     width: 46%;
     margin: 2%;
@@ -19,6 +17,9 @@
     display: inline-block;
     position: relative;
     &:hover{
+      transform: scale(1.14);
+      transition: 800ms;
+
       &__image-heading{
         display: block;
       }

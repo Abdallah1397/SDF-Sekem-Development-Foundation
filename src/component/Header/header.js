@@ -9,9 +9,9 @@ const Header = () => {
         <div id="navbarSupportedContent" className="container">
           <ul className="navbar-nav  header__ul">
             <li className="nav-item active header__li">
-              <NavLink exact to="/about" className="nav-link  font-weight-bold">
+              <a href="/about" className="nav-link  font-weight-bold">
                 About Us <span className="sr-only">(current)</span>
-              </NavLink>
+              </a>
             </li>
             <li className="nav-item header__li">
               <a href="/media" className="nav-link  font-weight-bold ">
