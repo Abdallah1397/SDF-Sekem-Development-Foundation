@@ -1,0 +1,36 @@
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/variable.scss';
+
+.donateTitle{
+    width: 50%;
+    margin-left:25%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border: 2px solid $border-color;
+    padding: 2%;
+    @include atSmallestScreen{
+        width: 70%;
+        margin-left:15%;
+    }
+    @include atSmScreen{
+        width: 70%;
+        margin-left:15%;
+    }
+    @include atMdScreen{
+        width: 70%;
+        margin-left:15%;
+    }
+
+    &__div{
+        display: flex;
+
+    }
+    &__img{
+        width: 35%;
+    }
+    &__P{
+        width: 60%;
+        margin-left: 3%;
+   
+    }
+}

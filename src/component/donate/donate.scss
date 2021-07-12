@@ -1,0 +1,31 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variable";
+
+.donate {
+  width: 80%;
+  margin-left: 11%;
+  display: table;
+  padding: 30px;
+  border-bottom: 2px solid $border-color;
+
+  &__title {
+    font-size: 2em;
+    font-family: cursive;
+    font-weight: bolder;
+    color: $main-color;
+    &:hover {
+      cursor: pointer;
+      color: $logo-color;
+    }
+  }
+  &__p {
+    font-family: cursive;
+  }
+  &__img {
+    float: right;
+    &:hover {
+      transform: scale(1.4);
+      transition: 800ms;
+    }
+  }
+}

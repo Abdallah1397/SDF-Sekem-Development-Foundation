@@ -1,0 +1,19 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variable";
+
+.rightContent {
+  width: 80%;
+  margin-left: 10%;
+  display: table;
+
+  &__title {
+    font-size: 1.3em;
+    font-family: cursive;
+    font-weight: bolder;
+    color: $main-color;
+  }
+  &__p {
+    font-family: cursive;
+  }
+
+}

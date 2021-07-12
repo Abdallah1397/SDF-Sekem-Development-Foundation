@@ -6,6 +6,8 @@
   margin: 2%;
   display: inline-block;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: cursive;
+
   @include atSmallestScreen {
     width: 85%;
   }
@@ -17,7 +19,6 @@
     padding-left: 1rem;
   }
   &__title {
-    font-family: Arial, Helvetica, sans-serif;
     color: $logo-color;
     padding-left: 1rem;
   }

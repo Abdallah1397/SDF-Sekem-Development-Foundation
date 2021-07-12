@@ -18,7 +18,7 @@ import Ecological from "./pages/ecological";
 import Social from "./pages/socialEmpowerment";
 import Cultural from "./pages/cultural";
 import MediaCenter from "./pages/mediaCenter";
-import Careers from "./pages/carees";
+import Careers from "./pages/careers";
 import ContactUs from "./pages/contactUs";
 import Partnerships from "./pages/partnerships";
 import NewsPage from "./pages/news";
@@ -27,6 +27,8 @@ import MainSector from "./pages/mainSectors";
 import Projects from './pages/projects';
 import projectDetails from "./pages/projectDetails";
 import MediaCenterPhotos from './pages/mediaCenterPhotos';
+import Donate from "./pages/donate";
+import DonateDetails from "./pages/donateDetails";
 function App() {
   /********************************* Up Top ********************************/
   // // state to scrollTop arrow
@@ -60,6 +62,7 @@ function App() {
           <Navbar />
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/donate" component={Donate} />
           <Route exact path="/economic" component={Eeconomic} />
           <Route exact path="/cultural" component={Cultural} />
           <Route exact path="/social" component={Social} />
@@ -74,6 +77,11 @@ function App() {
           <Route exact path="/projects-programs/:id" component={Projects}/>
           <Route exact path="/project/:id" component={projectDetails}/>
           <Route exact path="/photos" component={MediaCenterPhotos}/>
+          <Route exact path="/donateHealth" component={DonateDetails}/>
+          <Route exact path="/careers" component={Careers}/>
+
+
+
 
 
           {/*  up to top button */}

@@ -223,6 +223,7 @@ body {
   width: 70%;
   margin-left: 15%;
   margin-bottom: 5%;
+
 }
 
 // **********************************************************************
@@ -231,4 +232,36 @@ body {
 .about-ul{
   width: 80%;
   margin-left: 11%;
+  font-family: cursive;
+
+}
+// **********************************************************************
+// careesLink ****************************************
+// **********************************************************************
+.careesLink{
+  width: 80%;
+  margin-left: 10%;
+  height: 70px;
+  background-color:#E9E9E9 ;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 2%;
+  margin-top: 2%;
+
+
+  
+}
+.careesLink>a{
+  color: red;
+  font-weight: bold;
+  font-family: cursive;
+}
+.careersMail{
+  width: 80%;
+  margin-left: 10%;
+  font-family: cursive;
+}
+.careersMail>p>a{
+  color: red;
 }

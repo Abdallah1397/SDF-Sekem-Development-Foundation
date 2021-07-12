@@ -96,15 +96,14 @@ const Navbar = ({sector,getSector}) => {
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  exact
-                  to="/donate"
+                <a
+                  href="/donate"
                   className="site-header__link"
                   id="item"
                   onClick={handleClickNavbarItem}
                 >
                   Donate
-                </NavLink>
+                </a>
               </li>
             </ul>
             <div className="site-header__icons">

@@ -19,7 +19,7 @@ const Header = () => {
               </a>
             </li>
             <li className="nav-item header__li">
-              <a href="/career" className="nav-link  font-weight-bold">
+              <a href="/careers" className="nav-link  font-weight-bold">
                 Careers
               </a>
             </li>
