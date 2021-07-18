@@ -42,7 +42,7 @@ const Careers = () => {
         topic="You are most welcome to make an internship or, if you are coming from abroad, to stay and work with us for a while at SEKEM or one of its subsidiaries. Please note that we can only accept interns who are staying for at least 12 months and are over 22 years of age."
       />
       <div className="careesLink">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpvKTE6D5MoGCEAGBtzXj-Ex18oqCDUeZIU9lCEvh-U2H_Pg/viewform">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpvKTE6D5MoGCEAGBtzXj-Ex18oqCDUeZIU9lCEvh-U2H_Pg/viewform" target="_blank">
           Apply here to join our internship program
         </a>
       </div>
@@ -71,7 +71,7 @@ const Careers = () => {
           , or through this form:
         </p>
       </div>
-      <div>
+      <div className="form">
         <Formik
           initialValues={{
             type: "",
@@ -95,15 +95,21 @@ const Careers = () => {
             handleSubmit,
           }) => (
             <Form handleSubmit={handleSubmit}>
-            {/* TYPE OF INQUIRY  */}
-              <label>PLEASE CHOOSE YOUR TYPE OF INQUIRY </label>
-              <select
+
+              {/* TYPE OF INQUIRY ************************  */}
+              <label className="labels" style={{ display: "block" }}>
+                PLEASE CHOOSE YOUR TYPE OF INQUIRY{" "}
+              </label>
+              <Field as="select"
                 name="type"
                 value={values.type}
                 onChange={handleChange}
                 onBlur={handleBlur}
+                style={{ display: "block" }}
+                className="listBox"
+                
               >
-                <option value="" label="---" style={{ display: "block" }} />
+                <option value="" label="---"  className="listBox" style={{ display: "block" }} />
                 {/* map function to iterate through the type */}
                 {type
                   ? type.map((item) => {
@@ -112,89 +118,109 @@ const Careers = () => {
                           value={item}
                           label={item}
                           style={{ display: "block" }}
+                          className="listBox"
                         />
                       );
                     })
                   : ""}
-              </select>
-                {/* Handle Error */}
+              </Field>
+              {/* Handle Error */}
               {errors.type && touched.type ? (
-                <div className="">{errors.type}</div>
+                <div style={{ color: "#DB0E1B" }}>{errors.type}</div>
               ) : null}
-               {/* Name */}
-               <label className="">Name</label>
-               <Field
-                 type="text"
-                 name="name"
-                 id="name"
-                 className=""
-                 handleChange={handleChange}
-                 value={values['namea']}
-                 handleBlur={handleBlur}
-               />
-               {errors.name && touched.name ? (
-                 <div className="">
-                   {errors.name}
-                 </div>
-               ) : null}
-                {/* Email */}
-                <label className="row col-12 mt-3"> Email</label>
-                <Field
-                  type="email"
-                  name="email"
-                  id="email"
-                  className=""
-                  handleChange={handleChange}
-                  value={values["email"]}
-                  handleBlur={handleBlur}
-                />
-                {errors.email && touched.email ? (
-                  <div className="">
-                    {errors.email}
-                  </div>
-                ) : null}
-                   {/* Subject */}
-                   <label className=""> Subject</label>
-                   <Field
-                     type="subject"
-                     name="subject"
-                     id="subject"
-                     className=""
-                     handleChange={handleChange}
-                     value={values["subject"]}
-                     handleBlur={handleBlur}
-                   />
-                   {errors.subject && touched.subject ? (
-                     <div className="">
-                       {errors.subject}
-                     </div>
-                   ) : null}
-                      {/* Message */}
-                      <label className=""> Message</label>
-                      <Field
-                        type="message"
-                        name="message"
-                        id="message"
-                        className=""
-                        handleChange={handleChange}
-                        value={values["message"]}
-                        handleBlur={handleBlur}
-                      />
-                      {errors.message && touched.message ? (
-                        <div className="">
-                          {errors.message}
-                        </div>
-                      ) : null}
-                      <label>
-                      <Field type="checkbox" name="checked" />
-                      BY SENDING YOUR DATA YOU AGREE TO RECEIVE INFORMATION FROM SEKEM AND AGREE WITH OUR PRIVACY NOTICE. YOU MAY UNSUBSCRIBE AT ANY TIME.
-                    </label>
-                      <button
-                      className=""
-                      type="submit"
-                    >
-                      Submit
-                    </button>
+
+
+              {/* Name ************************ */}
+              <label className="labels" style={{ display: "block" }}>
+                Name
+              </label>
+              <Field
+                type="text"
+                name="name"
+                id="name"
+                className="fieldForm"
+                handleChange={handleChange}
+                value={values["name"]}
+                handleBlur={handleBlur}
+                style={{ display: "block" }}
+              />
+              {errors.name && touched.name ? (
+                <div style={{ color: "#DB0E1B" }}>{errors.name}</div>
+              ) : null}
+
+              {/* Email ************************ */}
+              <label className="labels" style={{ display: "block" }}>
+                {" "}
+                Email
+              </label>
+              <Field
+                type="email"
+                name="email"
+                id="email"
+                className="fieldForm"
+                handleChange={handleChange}
+                value={values["email"]}
+                handleBlur={handleBlur}
+                style={{ display: "block" }}
+              />
+              {errors.email && touched.email ? (
+                <div style={{ color: "#DB0E1B" }}>{errors.email}</div>
+              ) : null}
+
+              {/* Subject ************************ */}
+              <label className="labels" style={{ display: "block" }}>
+                {" "}
+                Subject
+              </label>
+              <Field
+                type="text"
+                name="subject"
+                id="subject"
+                className="fieldForm"
+                handleChange={handleChange}
+                value={values["subject"]}
+                handleBlur={handleBlur}
+                style={{ display: "block" }}
+              />
+              {errors.subject && touched.subject ? (
+                <div style={{ color: "#DB0E1B" }}>{errors.subject}</div>
+              ) : null}
+
+              {/* Message ************************ */}
+              <label className="labels" style={{ display: "block" }}>
+                {" "}
+                Message
+              </label>
+              <Field as="textarea"
+                type="message"
+                name="message"
+                id="message"
+                className="scrollabletextbox"
+                handleChange={handleChange}
+                value={values["message"]}
+                handleBlur={handleBlur}
+                style={{ display: "block" }}
+              />
+              {errors.message && touched.message ? (
+                <div style={{ color: "#DB0E1B" }}>{errors.message}</div>
+              ) : null}
+
+              {/* Check data ************************ */}
+              <label className="labels" style={{ display: "block" }}>
+                <Field type="checkbox" name="checked" />
+                BY SENDING YOUR DATA YOU AGREE TO RECEIVE INFORMATION FROM SEKEM
+                AND AGREE WITH OUR PRIVACY NOTICE. YOU MAY UNSUBSCRIBE AT ANY
+                TIME.
+              </label>
+
+             {/* Send Button ************************ */}
+              <button
+                className="btn btn-red"
+                type="submit"
+                style={{ display: "block" }}
+              >
+                Send
+              </button>
             </Form>
           )}
         </Formik>

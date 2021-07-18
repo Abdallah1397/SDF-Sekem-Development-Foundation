@@ -1,0 +1,45 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variable";
+
+.publications{
+    width: 30%;
+    margin-left: 1%;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1000;
+
+    &:hover{
+        transform: scale(1.1);
+        transition: 800ms;   
+        z-index: 1;
+        background-color: white;
+
+
+    }
+}
+.publications>div>h4{
+    font-family: cursive;
+    font-size: 1.4em;
+    font-weight: bolder;
+    text-transform: capitalize;
+
+}
+.publications>div>a{
+    font-family: cursive;
+    font-size: 1.4em;
+    font-weight: bolder;
+    text-transform: capitalize;
+    padding-bottom: 5px;
+    &:hover{
+        cursor: pointer;
+    }
+
+}
+.Download{
+    border-top: 2px solid $border-color;
+    padding: 4%;
+
+}

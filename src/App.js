@@ -29,6 +29,7 @@ import projectDetails from "./pages/projectDetails";
 import MediaCenterPhotos from './pages/mediaCenterPhotos';
 import Donate from "./pages/donate";
 import DonateDetails from "./pages/donateDetails";
+import Publications from "./pages/publications";
 function App() {
   /********************************* Up Top ********************************/
   // // state to scrollTop arrow
@@ -79,6 +80,8 @@ function App() {
           <Route exact path="/photos" component={MediaCenterPhotos}/>
           <Route exact path="/donateHealth" component={DonateDetails}/>
           <Route exact path="/careers" component={Careers}/>
+          <Route exact path="/publications" component={Publications}/>
+
 
 
 
