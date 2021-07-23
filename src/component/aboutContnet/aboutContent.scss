@@ -2,17 +2,10 @@
 @import '../../assets/styles/variable';
 
 .aboutContent {
-    padding-top: 30px;
     width: 80%;
     margin-left: 10%;
-    display: inline-block;
-    margin-bottom: 50px;
-
-    @include atSmallestScreen{
-        padding-top: 5px;
-        width: 70%;
-        margin-left: 15%;
-    }
+    display: table;
+    padding: 30px;
     &__title{
         font-weight: bold;
     font-family: cursive;
@@ -20,11 +13,36 @@
         text-align: center;
         color:#F5882B;
     }
-    &__paragraph{
-        font-size: 1em;
-        text-align: justify;
-        color: black;
-        font-family: cursive;
+    // &__paragraph{
+    //     font-size: 1em;
+    //     text-align: justify;
+    //     color: black;
+    //     font-family: cursive;
 
+    // }
+    &__div{
+        display: flex;
+        @include atSmallestScreen{
+            display: block;
+
+
+        }
+    }
+    &__img{
+        width: 35%;
+        padding: 3%;
+        float: right;
+        @include atSmallestScreen{
+            display: block;
+            width: 100%;
+            padding-top: 10%;
+
+
+        }
+    }
+    &__P{
+        width: 100%;
+        margin-right: 3%;
+   
     }
 }
