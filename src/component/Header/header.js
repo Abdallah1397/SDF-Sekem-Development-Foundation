@@ -15,7 +15,7 @@ const Header = () => {
             </li>
             <li className="nav-item header__li">
               <a href="/media" className="nav-link  font-weight-bold ">
-                Media Center
+                Projects
               </a>
             </li>
             <li className="nav-item header__li">

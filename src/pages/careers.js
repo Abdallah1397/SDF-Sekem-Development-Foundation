@@ -2,11 +2,15 @@ import { Formik, Form, Field } from "formik";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import * as Yup from "yup";
+import Popup from "reactjs-popup";
+import 'reactjs-popup/dist/index.css'
 import SliderBanner from "../component/SliderBanner/sliderBanner";
 import Content from "../component/Content/Content";
 import RightContent from "../component/rightContent.js/rightContent";
+import LoadingSpinner from "../component/spinner/spinner";
 const Careers = () => {
   const [type, setType] = useState([]);
+  const [loading,setLoading]=useState(false);
   useEffect(() => {
     axios.get("http://10.0.30.166:8080/career-type").then((result) => {
       setType(result.data[0].type);
@@ -82,8 +86,13 @@ const Careers = () => {
             data: false,
           }}
           validationSchema={joinValidations}
-          onSubmit={(values) => {
-            console.log(values);
+          onSubmit={(values,{resetForm}) => {
+            setLoading(true);
+            axios.post('http://10.0.30.166:8080/add-career',values).then((response)=>{
+              console.log(response);
+              resetForm({values:''});
+              setLoading(false);
+            })
           }}
         >
           {({
@@ -221,9 +230,12 @@ const Careers = () => {
               >
                 Send
               </button>
+              {loading ? <LoadingSpinner /> : "" }
+              
             </Form>
           )}
         </Formik>
+       
       </div>
     </div>
   );

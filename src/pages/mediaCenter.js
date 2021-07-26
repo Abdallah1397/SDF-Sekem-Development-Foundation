@@ -17,7 +17,7 @@ const MediaCenter = ({media,getMedia}) => {
   return (
     <div>
       <SliderBanner />
-    <Title title="Media Center" />
+    <Title title="Projects" />
     <div className="DivDetail">
     {media
       ? media.map((item) => {
