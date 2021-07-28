@@ -11,8 +11,8 @@
   border-bottom: 1px solid $line-color;
   padding-bottom: 20px;
   justify-content: center;
-  font-family: cursive;
-
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   &__navbar {
     display: flex;
     justify-content: space-between;
@@ -78,7 +78,7 @@
         min-height: 100vh;
         transition: ease 1s all;
       }
-      @include atMdScreen{
+      @include atMdScreen {
         opacity: 1;
         display: flex;
         position: absolute;
@@ -113,7 +113,7 @@
       padding-top: 10px;
       color: $main-white;
     }
-    @include atMdScreen{
+    @include atMdScreen {
       font-size: 16px;
       padding-top: 10px;
       color: $main-white;
@@ -131,22 +131,20 @@
       font-size: 15px;
     }
   }
-  &__dropdown{
+  &__dropdown {
     border: 0px solid $logo-color;
- 
   }
-  &__dropdown-item{
+  &__dropdown-item {
     display: block;
     color: black;
     font-size: 19px;
     padding: 5px;
     width: 300px;
-    @include atSmallestScreen{
+    @include atSmallestScreen {
       width: 200px;
-
     }
- 
-    &:hover{
+
+    &:hover {
       text-decoration: none;
       color: #996a0e;
     }
@@ -155,8 +153,7 @@
       color: #996a0e;
       display: block;
       font-size: 19px;
-    padding: 10px;
-
+      padding: 10px;
     }
   }
   &__icons-list {

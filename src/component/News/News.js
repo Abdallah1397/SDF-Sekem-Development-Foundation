@@ -7,7 +7,8 @@ const News=({id,image,date,title,subTitle})=>{
             <h6 className="news__date">{date}</h6>
             <h2 className="news__title">{title}</h2>
             <p className="news__subTitle">{subTitle}</p>
-            <span className="news__span"><a className="news__a" href={`/news/${id}`}></a></span>
+            <span className="news__span"><a className="news__a" href={`/news/${id}`}>Show More  
+            </a></span>
 
         </div>
     )

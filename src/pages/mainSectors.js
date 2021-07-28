@@ -1,12 +1,15 @@
 import { useParams } from "react-router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { getSectorDetailsRequest } from "../store/actions/sectorDetails";
+import ReactPaginate from "react-paginate";
+
 import Content from "../component/Content/Content";
 import SliderBanner from "../component/SliderBanner/sliderBanner";
 import ObjectDetails from "../component/objectDetails/objectDetails";
 import AnimatedCounter from "../component/AnimatedCounter/animatedCounter";
-
+import Title from "../component/Title/Title";
+import ProjectList from "../component/projectList/projectList";
 const MainSector = ({ sectorDetail, getSectorDetail }) => {
   const params = useParams();
   useEffect(() => {
@@ -14,25 +17,43 @@ const MainSector = ({ sectorDetail, getSectorDetail }) => {
       getSectorDetail(params.id);
     }
   }, [params.id]);
+  /* State used to the paginate */
+  const [pageNumber, setPageNumber] = useState(0);
+  const [count, setCount] = useState(0);
+
+  /* number of news per page */
+  const ProjectsPerPage = 4;
+  const pageProjects = pageNumber * ProjectsPerPage;
+  if (sectorDetail.programs) {
+    const pageCount = Math.ceil(sectorDetail.programs.length / ProjectsPerPage);
+    console.log(pageCount);
+  }
+
+  /* Changing Page Function  */
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
   return (
+    // Display Project Details
     <div>
       <SliderBanner />
-      <Content title={sectorDetail.title} topic={sectorDetail.breif} />
+      <Title title={sectorDetail.title} />
       <div className="DivDetail">
-      {sectorDetail.programs
-        ? sectorDetail.programs.map((item) => {
-            return (
-                <ObjectDetails
-                  title={item.title}
-                  image={`http://10.0.30.166:8080/${item.img}`}
-                  href="projects-programs"
-                  id={item._id}
-                />
-            );
-          })
-        : "No Data To Show"}
-        </div>
-
+        {sectorDetail.programs
+          ? sectorDetail.programs
+              .slice(pageProjects, pageProjects + ProjectsPerPage)
+              .map((item) => {
+                return (
+                  <ProjectList
+                    projectName={item.title}
+                    link={item.link}
+                    list={item.details}
+                  />
+                );
+              })
+          : "No Data To Show"}
+      </div>
+   
       <AnimatedCounter
         counter1={527872}
         fact1="Investments"

@@ -7,6 +7,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
   
 
   &__line {
@@ -28,7 +30,6 @@
     text-align: center;
     text-transform: capitalize;
     font-size: 2em;
-    font-family: cursive;
     font-weight: bolder;
     color: $main-color;
 

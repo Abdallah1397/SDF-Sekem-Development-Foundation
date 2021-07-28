@@ -1,0 +1,31 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variable";
+
+.list{
+    margin: 60px;
+    border: 5px solid $border-color;
+    font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+    &__div-header{
+        border-bottom: 5px solid $border-color;
+        background-color: $border-color;
+        padding: 20px;
+        font-weight: bolder;
+        margin-bottom: 5px;
+        font-size: 30px;
+
+    }
+  
+    &__link{
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+
+    }
+    &__mainDiv{
+        padding: 20px;
+        
+
+    }
+   
+}

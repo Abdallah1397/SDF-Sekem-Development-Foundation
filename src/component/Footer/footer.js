@@ -53,7 +53,6 @@ const Footer = ({ sector, getSector }) => {
           </div>
           <div className="col-10 col-lg-4 mx-auto site-footer__content">
             <h5 className="site-footer__content-title">INFORMATIONS</h5>
-            <p className="site-footer__content-text">Media Center</p>
             <p className="site-footer__content-text">Partnership</p>
             <p className="site-footer__content-text"> News & Events</p>
             <p className="site-footer__content-text"> Publications </p>

@@ -1,45 +1,43 @@
 @import "../../assets/styles/mixins";
 @import "../../assets/styles/variable";
 
-.publications{
-    width: 30%;
-    margin-left: 1%;
-    margin-top: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: inline-block;
+.objectDetail{
+  width: 32%;
+  margin-left: 1%;
+  margin-top: 15px;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: inline-block;
+  border-radius: 8px;
+  z-index: 1;
+  &:hover {
+    #title {
+      display: inline-block;
+    }
+  }
+  @include atSmallestScreen {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 50px;
+  }
+  &__image {
+    width: 100%;
     border-radius: 8px;
+  }
+  &__fakeDiv {
+    background-color: $logo-color;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
     text-align: center;
-    z-index: 1000;
-
-    &:hover{
-        transform: scale(1.1);
-        transition: 800ms;   
-        z-index: 1;
-        background-color: white;
-
-
-    }
-}
-.publications>div>h4{
-    font-family: cursive;
-    font-size: 1.4em;
-    font-weight: bolder;
+    color: $main-white;
+    font-size: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     text-transform: capitalize;
-
-}
-.publications>div>a{
-    font-family: cursive;
-    font-size: 1.4em;
-    font-weight: bolder;
-    text-transform: capitalize;
-    padding-bottom: 5px;
-    &:hover{
-        cursor: pointer;
-    }
-
-}
-.Download{
-    border-top: 2px solid $border-color;
-    padding: 4%;
-
+    font-family: "Poppins", sans-serif;
+    font-family: "Roboto", sans-serif;  }
 }

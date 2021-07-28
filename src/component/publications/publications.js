@@ -1,19 +1,17 @@
 import "./publications.scss";
-import SDF from "../../assets/images/social/IMG_6655.PNG";
-const Publications = ({img,title,link}) => {
+const ObjectDetails = ({ image, title, link }) => {
+  // ObjectDetails to any display as image and title
   return (
-    <div className="publications">
-      <div>
-        <img src={img} width="100%" />
-        <h4>{title}</h4>
-      </div>
-      <div className="Download">
-        <a 
-        href='https://indd.adobe.com/view/e2fade96-0725-4668-8ac9-de61eada6200'
-        target='_blank'>
-        Preview</a>
-      </div>
+    <div className="objectDetail">
+      <a href={link} target='_blank'>
+        <div>
+          <img className="objectDetail__image" src={image} height="400px" />
+          <div className="objectDetail__fakeDiv" id="title">
+            {title}
+          </div>
+        </div>
+      </a>
     </div>
   );
 };
-export default Publications;
+export default ObjectDetails;

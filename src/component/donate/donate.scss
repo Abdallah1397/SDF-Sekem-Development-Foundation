@@ -7,10 +7,11 @@
   display: table;
   padding: 30px;
   border-bottom: 2px solid $border-color;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 
   &__title {
     font-size: 2em;
-    font-family: cursive;
     font-weight: bolder;
     color: $main-color;
     &:hover {
@@ -18,9 +19,7 @@
       color: $logo-color;
     }
   }
-  &__p {
-    font-family: cursive;
-  }
+  
   &__img {
     float: right;
     &:hover {
