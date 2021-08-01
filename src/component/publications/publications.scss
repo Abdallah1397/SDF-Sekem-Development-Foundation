@@ -1,7 +1,7 @@
 @import "../../assets/styles/mixins";
 @import "../../assets/styles/variable";
 
-.objectDetail{
+.publications{
   width: 32%;
   margin-left: 1%;
   margin-top: 15px;
@@ -33,7 +33,7 @@
     display: none;
     text-align: center;
     color: $main-white;
-    font-size: 24px;
+    font-size: 1.7em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

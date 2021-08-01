@@ -3,32 +3,22 @@ import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { getSectorDetailsRequest } from "../store/actions/sectorDetails";
 import ReactPaginate from "react-paginate";
-
-import Content from "../component/Content/Content";
 import SliderBanner from "../component/SliderBanner/sliderBanner";
-import ObjectDetails from "../component/objectDetails/objectDetails";
 import AnimatedCounter from "../component/AnimatedCounter/animatedCounter";
 import Title from "../component/Title/Title";
 import ProjectList from "../component/projectList/projectList";
 const MainSector = ({ sectorDetail, getSectorDetail }) => {
   const params = useParams();
+  /* State used to the paginate */
+  const [pageNumber, setPageNumber] = useState(0);
+  /* number of news per page */
+  const ProjectsPerPage = 6;
+  const pageProjects = pageNumber * ProjectsPerPage;
   useEffect(() => {
     if (params.id) {
       getSectorDetail(params.id);
     }
-  }, [params.id]);
-  /* State used to the paginate */
-  const [pageNumber, setPageNumber] = useState(0);
-  const [count, setCount] = useState(0);
-
-  /* number of news per page */
-  const ProjectsPerPage = 4;
-  const pageProjects = pageNumber * ProjectsPerPage;
-  if (sectorDetail.programs) {
-    const pageCount = Math.ceil(sectorDetail.programs.length / ProjectsPerPage);
-    console.log(pageCount);
-  }
-
+    }, [params.id]);
   /* Changing Page Function  */
   const changePage = ({ selected }) => {
     setPageNumber(selected);
@@ -52,8 +42,23 @@ const MainSector = ({ sectorDetail, getSectorDetail }) => {
                 );
               })
           : "No Data To Show"}
+
       </div>
-   
+         {/* React Paginate to make pagination in the page */}
+         <div className="paginate">
+         <ReactPaginate
+           previousLabel={"← Previous"}
+           nextLabel={"Next →"}
+           pageCount={sectorDetail.programs?(Math.ceil(sectorDetail.programs.length/ProjectsPerPage)):0}
+           onPageChange={changePage}
+           containerClassName={"pagination"}
+           previousLinkClassName={"pagination__link"}
+           nextLinkClassName={"pagination__link"}
+           disabledClassName={"pagination__link--disabled"}
+           activeClassName={"pagination__link"}
+           className="mt-5"
+         />
+       </div>
       <AnimatedCounter
         counter1={527872}
         fact1="Investments"

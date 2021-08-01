@@ -13,10 +13,6 @@ import Navbar from "./component/NavBar/navnbar";
 import Home from "./pages/home";
 import Footer from "./component/Footer/footer";
 import About from "./pages/about";
-import Eeconomic from "./pages/economic";
-import Ecological from "./pages/ecological";
-import Social from "./pages/socialEmpowerment";
-import Cultural from "./pages/cultural";
 import MediaCenter from "./pages/mediaCenter";
 import Careers from "./pages/careers";
 import ContactUs from "./pages/contactUs";
@@ -64,10 +60,6 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/donate" component={Donate} />
-          <Route exact path="/economic" component={Eeconomic} />
-          <Route exact path="/cultural" component={Cultural} />
-          <Route exact path="/social" component={Social} />
-          <Route exact path="/ecological" component={Ecological} />
           <Route exact path="/media" component={MediaCenter} />
           <Route exact path="/career" component={Careers} />
           <Route exact path="/contact" component={ContactUs} />
